@@ -20,7 +20,7 @@ public class DruidMonitorConfig {
             ServletRegistrationBean servletRegistrationBean = new ServletRegistrationBean(new StatViewServlet(),
                     "/druid/*");
             // IP白名单
-            servletRegistrationBean.addInitParameter("allow", "192.168.0.109,127.0.0.1,localhost");
+            servletRegistrationBean.addInitParameter("allow", "192.168.0.109,127.0.0.1");
             // IP黑名单(共同存在时，deny优先于allow)
             servletRegistrationBean.addInitParameter("deny", "192.168.0.100");
             // 控制台管理用户
